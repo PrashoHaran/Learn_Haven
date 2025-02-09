@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sci_wall"
+    tools:context=".science">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Experiment, Explore\nDiscover!"
+                android:textColor="#ffff"
+                android:textSize="27sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/pfont" />
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="70dp"
+                android:layout_height="55dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/b_back"
+                android:scaleType="fitCenter" />
+
+        </RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Science Facts 🧪"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:padding="16dp"
+            android:gravity="center"
+            android:textColor="#ffff" />
+
+        <TextView
+            android:id="@+id/txt_fact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Did you know? The sun is 400 times larger than the moon!"
+            android:textSize="18sp"
+            android:background="#fff5e5"
+            android:textColor="@color/black"
+            android:padding="12dp"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Explore Video Tutorials"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="16dp"
+            android:textColor="#ffff" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp">
+
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/tutorial" />
+
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/tutorial1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Watch Tutorial"
+            android:backgroundTint="#0E9EAB"
+            android:textColor="#FFFFFF"
+            android:padding="8dp"
+            android:textSize="16sp"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Explore Science Books"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:padding="16dp"
+            android:gravity="center"
+            android:textColor="#ffff" />
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:padding="10dp"
+            android:gravity="center">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/book1"
+                    android:layout_width="120dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/emence_world"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="An Immense World"
+                    android:textColor="@android:color/white"
+                    android:textSize="17sp"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/book2"
+                    android:layout_width="120dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/sounds"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sounds of Life"
+                    android:textColor="@android:color/white"
+                    android:textSize="17sp"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/book3"
+                    android:layout_width="120dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/birds"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Genius of Birds"
+                    android:textColor="@android:color/white"
+                    android:textSize="17sp"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/book4"
+                    android:layout_width="120dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/marrie"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Marie Curie"
+                    android:textColor="@android:color/white"
+                    android:textSize="17sp"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/book5"
+                    android:layout_width="120dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/light"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Light Eaters"
+                    android:textColor="@android:color/white"
+                    android:textSize="17sp"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/book6"
+                    android:layout_width="120dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/moon"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Our Moon"
+                    android:textColor="@android:color/white"
+                    android:textSize="17sp"
+                    android:gravity="center" />
+            </LinearLayout>
+
+        </GridLayout>
+
+    </LinearLayout>
+
+</ScrollView>

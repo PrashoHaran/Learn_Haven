@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home"
+    android:background="@drawable/home_bg"
+    android:paddingLeft="10dp"
+    android:paddingTop="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/forum"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/feedbacklogo"
+            android:layout_gravity="end"
+            android:layout_margin="15dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome back\nPrasho!"
+            android:textSize="35dp"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:fontFamily="@font/pfont"
+            android:letterSpacing="0.03"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp" />
+
+        <EditText
+            android:id="@+id/editPerson"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Search knowledge here..."
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:padding="10dp"
+            android:background="@drawable/search_bar_bg"
+            android:drawableLeft="@drawable/baseline_search_24"
+            android:drawablePadding="15dp"
+            android:textStyle="italic"
+            android:textSize="20sp"
+            android:inputType="text"
+            android:textColor="#000" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/top_card"
+            android:orientation="vertical"
+            android:padding="30dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:letterSpacing="0.035"
+                android:text="Start learning!"
+                android:textColor="#305f72"
+                android:textSize="26dp" />
+
+            <Button
+                android:id="@+id/btnCategories"
+                android:layout_width="190dp"
+                android:layout_height="58dp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#FF7F7F"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Categories"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/card_buttton_bg" />
+
+            <TextView
+                android:id="@+id/cardText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/pfont"
+                android:letterSpacing="0.035"
+                android:text="Courses in Process"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/c1"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                app:cardBackgroundColor="#fae4f4"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="5dp"
+                android:layout_marginBottom="10dp">
+
+                <!-- Content inside the CardView -->
+                <RelativeLayout
+                    android:id="@+id/basic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="25dp">
+
+                    <ImageView
+                        android:id="@+id/i1"
+                        android:layout_width="65dp"
+                        android:layout_height="75dp"
+                        android:src="@drawable/basic_lit" />
+
+                    <TextView
+                        android:id="@+id/t1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_toRightOf="@+id/i1"
+                        android:letterSpacing="0.03"
+                        android:text="Basic Education and\nLiteracy"
+                        android:textColor="#305f72"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_toRightOf="@+id/i1"
+                        android:layout_below="@+id/t1"
+                        android:layout_marginTop="2dp"
+                        android:text="Learn and Grow!"
+                        android:textStyle="bold"
+                        android:textColor="#f18c8e"
+                        android:textSize="20sp"/>
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/play_button"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="310dp"/>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/c2"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                app:cardBackgroundColor="#F8EEE1"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="5dp"
+                android:layout_marginBottom="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/ebook"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="25dp">
+
+                    <ImageView
+                        android:id="@+id/i2"
+                        android:layout_width="65dp"
+                        android:layout_height="75dp"
+                        android:src="@drawable/ebook" />
+
+                    <TextView
+                        android:id="@+id/t2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_toRightOf="@+id/i2"
+                        android:letterSpacing="0.03"
+                        android:text="E-Book"
+                        android:textColor="#305f72"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_toRightOf="@+id/i2"
+                        android:layout_below="@+id/t2"
+                        android:layout_marginTop="2dp"
+                        android:text="Read and Explore!"
+                        android:textStyle="bold"
+                        android:textColor="#f18c8e"
+                        android:textSize="20sp"/>
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/play_button"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="310dp"/>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/c3"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                app:cardBackgroundColor="#F8D9D9"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="5dp"
+                android:layout_marginBottom="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/tech"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="25dp">
+
+                    <ImageView
+                        android:id="@+id/i3"
+                        android:layout_width="65dp"
+                        android:layout_height="75dp"
+                        android:src="@drawable/tech" />
+
+                    <TextView
+                        android:id="@+id/t3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_toRightOf="@+id/i3"
+                        android:letterSpacing="0.03"
+                        android:text="Technology"
+                        android:textColor="#286A85"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/t3"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_toRightOf="@+id/i3"
+                        android:text="Tech Fun!"
+                        android:textColor="#f18c8e"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="310dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/play_button" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

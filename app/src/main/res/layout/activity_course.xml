@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".course"
+    android:orientation="vertical"
+    android:background="@drawable/category_bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="30dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/b_back"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Course\nCategories"
+        android:textSize="45dp"
+        android:textColor="#FFF"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-black"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="20dp"/>
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="1dp">
+        
+        <androidx.cardview.widget.CardView
+            android:id="@+id/c1"
+            android:layout_width="350dp"
+            android:layout_height="90dp"
+            app:cardBackgroundColor="#ffe9f9"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="5dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp">
+
+                <ImageView
+                    android:id="@+id/i1"
+                    android:layout_width="55dp"
+                    android:layout_height="73dp"
+                    android:src="@drawable/basic_lit"/>
+
+                <TextView
+                    android:id="@+id/t1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Basic Education and Literacy"
+                    android:layout_toRightOf="@+id/i1"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#305f72"
+                    android:letterSpacing="0.03"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="6dp"/>
+
+                <TextView
+                    android:id="@+id/basic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/t1"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/i1"
+                    android:text="Learn letters, words, and stories in a fun way! 📚✨"
+                    android:textColor="#f18c8e"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:ignore="TextSizeCheck"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/c2"
+            android:layout_below="@+id/c1"
+            android:layout_width="350dp"
+            android:layout_height="90dp"
+            app:cardBackgroundColor="#fff5e5"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp">
+
+            <RelativeLayout
+                android:id="@+id/ebook"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp">
+
+                <ImageView
+                    android:id="@+id/i2"
+                    android:layout_width="55dp"
+                    android:layout_height="73dp"
+                    android:src="@drawable/ebook"/>
+
+                <TextView
+                    android:id="@+id/t2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="E-Books"
+                    android:layout_toRightOf="@+id/i2"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#305f72"
+                    android:letterSpacing="0.03"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="6dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/t2"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/i2"
+                    android:text="Read amazing stories and learn new things! 📖✨"
+                    android:textColor="#f18c8e"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:ignore="TextSizeCheck"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/c3"
+            android:layout_below="@+id/c2"
+            android:layout_width="350dp"
+            android:layout_height="90dp"
+            app:cardBackgroundColor="#F8D9D9"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp">
+
+            <RelativeLayout
+                android:id="@+id/tec"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp">
+
+                <ImageView
+                    android:id="@+id/i3"
+                    android:layout_width="55dp"
+                    android:layout_height="73dp"
+                    android:src="@drawable/tech"/>
+
+                <TextView
+                    android:id="@+id/t3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Technology"
+                    android:layout_toRightOf="@+id/i3"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#305f72"
+                    android:letterSpacing="0.03"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="6dp"/>
+
+                <TextView
+                    android:id="@+id/tech"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/t3"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/i3"
+                    android:text="Learn technology in a fun and easy way. 💻🚀"
+                    android:textColor="#f18c8e"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:ignore="TextSizeCheck"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/c4"
+            android:layout_below="@+id/c3"
+            android:layout_width="350dp"
+            android:layout_height="90dp"
+            app:cardBackgroundColor="#D8F0C5"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp">
+
+                <ImageView
+                    android:id="@+id/i4"
+                    android:layout_width="55dp"
+                    android:layout_height="73dp"
+                    android:src="@drawable/arts"/>
+
+                <TextView
+                    android:id="@+id/t4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Creativity and Arts"
+                    android:layout_toRightOf="@+id/i4"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#305f72"
+                    android:letterSpacing="0.03"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="6dp"/>
+
+                <TextView
+                    android:id="@+id/arts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/t4"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/i4"
+                    android:text="Unleash your imagination with drawing, music, and crafts! 🎨🎶"
+                    android:textColor="#f18c8e"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:ignore="TextSizeCheck"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/c5"
+            android:layout_below="@+id/c4"
+            android:layout_width="350dp"
+            android:layout_height="90dp"
+            app:cardBackgroundColor="#C7F2EB"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp">
+
+            <RelativeLayout
+                android:id="@+id/game"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp">
+
+                <ImageView
+                    android:id="@+id/i5"
+                    android:layout_width="55dp"
+                    android:layout_height="73dp"
+                    android:src="@drawable/game"/>
+
+                <TextView
+                    android:id="@+id/t5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gaming"
+                    android:layout_toRightOf="@+id/i5"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#305f72"
+                    android:letterSpacing="0.03"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="6dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/t5"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/i5"
+                    android:text="Learn through play with fun and educational games! 🎮🧩"
+                    android:textColor="#f18c8e"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:ignore="TextSizeCheck"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/c6"
+            android:layout_below="@+id/c5"
+            android:layout_width="350dp"
+            android:layout_height="90dp"
+            app:cardBackgroundColor="#9FDBF0"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp">
+
+                <ImageView
+                    android:id="@+id/i6"
+                    android:layout_width="55dp"
+                    android:layout_height="73dp"
+                    android:src="@drawable/science"/>
+
+                <TextView
+                    android:id="@+id/t6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Science and Environment"
+                    android:layout_toRightOf="@+id/i6"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#305f72"
+                    android:letterSpacing="0.03"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="6dp"/>
+
+                <TextView
+                    android:id="@+id/science"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/t6"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/i6"
+                    android:text="Explore the wonders of nature, space, and science! 🌍🔬"
+                    android:textColor="#f18c8e"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:ignore="TextSizeCheck"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</LinearLayout>
