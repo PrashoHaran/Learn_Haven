@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/lightpink"
+    tools:context=".basicEducation">
+
+    <!-- Header Section -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:layout_marginTop="36dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pfont"
+            android:text="Education for Everyone!"
+            android:textColor="#141313"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/b_back"
+            android:scaleType="fitCenter" />
+    </RelativeLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/bannerSlider"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Daily Learning Tip"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:padding="16dp"
+        android:textColor="#333333" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Did you know? Reading for just 20 minutes a day exposes children to about 1.8 million words per year!"
+        android:textSize="18sp"
+        android:padding="12dp"
+        android:textColor="#555555"
+        android:background="#fff5e5"
+        android:layout_marginBottom="10dp" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Explore Educational Resources"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:padding="16dp"
+        android:textColor="#333333" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginEnd="10dp">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/sample1"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="E-books and PDFs" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="E-books and PDFs"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#563D56"
+                    android:gravity="center"
+                    android:paddingTop="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginEnd="10dp">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/sample2"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Art and Creativity" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Art and Creativity"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#563D56"
+                    android:gravity="center"
+                    android:paddingTop="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginEnd="10dp">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/sample4"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Interactive Learning" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Interactive Learning"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#563D56"
+                    android:gravity="center"
+                    android:paddingTop="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginEnd="10dp">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/sample3"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Geography and History" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Geography and History"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#563D56"
+                    android:gravity="center"
+                    android:paddingTop="5dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Interactive Learning Games"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:padding="16dp"
+        android:textColor="#333333" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:padding="8dp">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Alphabet Adventure"
+                android:backgroundTint="#FF7F7F"
+                android:textColor="#FFFFFF"
+                android:padding="8dp"
+                android:textSize="16sp"
+                android:ellipsize="end"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Puzzle\nMania"
+                android:backgroundTint="#FF7F7F"
+                android:textColor="#FFFFFF"
+                android:padding="8dp"
+                android:textSize="16sp"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Spelling\nBee"
+                android:backgroundTint="#FF7F7F"
+                android:textColor="#FFFFFF"
+                android:padding="8dp"
+                android:textSize="16sp"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Rhyme\nTime"
+                android:backgroundTint="#FF7F7F"
+                android:textColor="#FFFFFF"
+                android:padding="8dp"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+</LinearLayout>
