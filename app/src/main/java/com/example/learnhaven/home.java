@@ -33,6 +33,13 @@ public class home extends AppCompatActivity {
             startActivity(intent);
         });
 
+        // Navigate to profile management
+        ImageView profileImage = findViewById(R.id.profile);
+        profileImage.setOnClickListener(v -> {
+            Intent intent = new Intent(home.this, profile.class);
+            startActivity(intent);
+        });
+
         // Navigate to Course
         Button btnCategories = findViewById(R.id.btnCategories);
         btnCategories.setOnClickListener(v -> {
