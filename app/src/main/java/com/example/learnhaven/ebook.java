@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -36,5 +37,13 @@ public class ebook extends AppCompatActivity {
                 finish();
             }
         });
+
+        //Book registration
+        TextView registerBookCard = findViewById(R.id.registerBookCard);
+        registerBookCard.setOnClickListener(v -> {
+            Intent intent = new Intent(ebook.this, ebook_register.class);
+            startActivity(intent);
+        });
+
     }
 }
