@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/brown_bg"
+    android:padding="16dp"
+    tools:context=".ebook_register">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingBottom="10dp">
+
+        <!-- Back Button & Title -->
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="180dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/b_back" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="E-Book Registration"
+                android:textColor="#141313"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/pfont"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+
+        <!-- E-Book Form Fields -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/pfont"
+            android:paddingBottom="10dp"
+            android:text="Manage your digital library seamlessly"
+            android:textColor="#141313"
+            android:layout_marginBottom="20dp"
+            android:textSize="20sp"
+            android:textStyle="italic" />
+
+        <EditText
+            android:id="@+id/book_title"
+            android:layout_width="405dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_bg"
+            android:hint="Enter Book Title"
+            android:layout_marginBottom="10dp"
+            android:padding="12dp"
+            android:textColor="#5D4037"
+            android:textColorHint="#8D6E63"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/author_name"
+            android:layout_width="405dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter Author Name"
+            android:padding="12dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/input_bg"
+            android:textColor="#5D4037"
+            android:textColorHint="#8D6E63"
+            android:textSize="18sp"
+            android:layout_marginTop="12dp"/>
+
+        <EditText
+            android:id="@+id/genre"
+            android:layout_width="405dp"
+            android:layout_height="wrap_content"
+            android:hint="Genre of the Book"
+            android:padding="12dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/input_bg"
+            android:textColor="#5D4037"
+            android:textColorHint="#8D6E63"
+            android:textSize="18sp"
+            android:layout_marginTop="12dp"/>
+
+        <!-- Book Description -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="405dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:elevation="5dp"
+            app:cardBackgroundColor="#F8EEE1"
+            app:cardCornerRadius="20dp">
+
+            <EditText
+                android:id="@+id/book_description"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@android:color/transparent"
+                android:gravity="top"
+                android:layout_marginBottom="10dp"
+                android:textSize="18sp"
+                android:hint="Book Description"
+                android:inputType="textMultiLine"
+                android:padding="20dp"/>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Ratings -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="405dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:elevation="5dp"
+            app:cardBackgroundColor="#F8EEE1"
+            app:cardCornerRadius="20dp">
+
+            <EditText
+                android:id="@+id/ratings"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:gravity="top"
+                android:textSize="18sp"
+                android:hint="Give Ratings"
+                android:inputType="numberDecimal"
+                android:padding="20dp"
+            android:layout_marginBottom="10dp"/>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Upload Cover Image Button -->
+        <Button
+            android:id="@+id/btn_upload"
+            android:layout_width="405dp"
+            android:layout_height="wrap_content"
+            android:text="Upload Cover Image"
+            android:textSize="20sp"
+            android:backgroundTint="#795548"
+            android:textColor="#fff"
+            android:padding="12dp"
+            android:layout_marginTop="10dp"/>
+
+        <!-- CRUD Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingTop="15dp">
+
+            <Button
+                android:id="@+id/btn_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add"
+                android:textSize="15sp"
+                android:backgroundTint="#EAE0C8"
+                android:textColor="#000000"
+                android:padding="10dp"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/btn_update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Update"
+                android:textSize="15sp"
+                android:backgroundTint="#EAE0C8"
+                android:textColor="#000000"
+                android:padding="10dp"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/btn_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delete"
+                android:textSize="15sp"
+                android:backgroundTint="#EAE0C8"
+                android:textColor="#000000"
+                android:padding="10dp"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/btn_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View All"
+                android:textSize="15sp"
+                android:backgroundTint="#EAE0C8"
+                android:textColor="#000000"
+                android:padding="10dp"/>
+
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

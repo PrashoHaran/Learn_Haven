@@ -33,40 +33,48 @@ public class home extends AppCompatActivity {
             startActivity(intent);
         });
 
-        // Navigate to Course
+        // Navigate to profile management
+        ImageView profileImage = findViewById(R.id.profile);
+        profileImage.setOnClickListener(v -> {
+            Intent intent = new Intent(home.this, profile.class);
+            startActivity(intent);
+        });
+
+        // Navigate to Course Categories
         Button btnCategories = findViewById(R.id.btnCategories);
         btnCategories.setOnClickListener(v -> {
             Intent intent = new Intent(home.this, course.class);
             startActivity(intent);
         });
 
+        // Navigate to Basic Education
         View basicButton = findViewById(R.id.basic);
-        basicButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(home.this, basicEducation.class); // Ensure 'Gaming' is the correct class name
-                startActivity(intent);
-            }
+        basicButton.setOnClickListener(v -> {
+            Intent intent = new Intent(home.this, basicEducation.class); // Ensure this class exists
+            startActivity(intent);
         });
 
+        // Navigate to E-Book Section
         View ebookButton = findViewById(R.id.ebook);
-        ebookButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(home.this, ebook.class); // Ensure 'Gaming' is the correct class name
-                startActivity(intent);
-            }
+        ebookButton.setOnClickListener(v -> {
+            Intent intent = new Intent(home.this, ebook.class); // Ensure this class exists
+            startActivity(intent);
         });
 
+        // Navigate to Technology Section
         View techButton = findViewById(R.id.tech);
-        techButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(home.this, technology.class); // Ensure 'Gaming' is the correct class name
-                startActivity(intent);
-            }
+        techButton.setOnClickListener(v -> {
+            Intent intent = new Intent(home.this, technology.class); // Ensure this class exists
+            startActivity(intent);
         });
 
+        // Logout Button Functionality
+        Button logoutButton = findViewById(R.id.logoutButton);
+        logoutButton.setOnClickListener(v -> {
+            Intent intent = new Intent(home.this, login.class); // Replace 'login.class' with your actual login activity
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK); // Clears back stack
+            startActivity(intent);
+        });
 
     }
 }

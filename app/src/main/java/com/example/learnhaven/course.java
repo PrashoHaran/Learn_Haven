@@ -27,7 +27,6 @@ public class course extends AppCompatActivity {
             return insets;
         });
 
-        // Find the back button ImageView
         ImageView backButton = findViewById(R.id.back);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
