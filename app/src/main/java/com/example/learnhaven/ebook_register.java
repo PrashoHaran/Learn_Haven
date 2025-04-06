@@ -180,38 +180,86 @@ public class ebook_register extends AppCompatActivity {
             return;
         }
 
-        // Find the document reference to update
-        DocumentReference docRef = db.collection("ebooks").document("your_document_id_here");
+        db.collection("ebooks")
+                .whereEqualTo("title", title)
+                .get()
+                .addOnSuccessListener(queryDocumentSnapshots -> {
+                    if (!queryDocumentSnapshots.isEmpty()) {
+                        for (QueryDocumentSnapshot document : queryDocumentSnapshots) {
+                            DocumentReference docRef = db.collection("ebooks").document(document.getId());
 
-        Map<String, Object> updatedData = new HashMap<>();
-        updatedData.put("title", title);
-        updatedData.put("author", author);
-        updatedData.put("genre", bookGenre);
-        updatedData.put("description", description);
-        updatedData.put("ratings", rating);
-        updatedData.put("coverImageUrl", coverImageUrl);
+                            Map<String, Object> updatedData = new HashMap<>();
+                            updatedData.put("title", title);
+                            updatedData.put("author", author);
+                            updatedData.put("genre", bookGenre);
+                            updatedData.put("description", description);
+                            updatedData.put("ratings", rating);
 
-        docRef.set(updatedData, SetOptions.merge())
-                .addOnSuccessListener(aVoid -> {
-                    Toast.makeText(ebook_register.this, "Book updated successfully!", Toast.LENGTH_SHORT).show();
+                            // Update coverImageUrl only if a new one has been selected
+                            if (coverImageUrl != null && !coverImageUrl.isEmpty()) {
+                                updatedData.put("coverImageUrl", coverImageUrl);
+                            }
+
+                            docRef.set(updatedData, SetOptions.merge())
+                                    .addOnSuccessListener(aVoid -> {
+                                        Toast.makeText(ebook_register.this, "Book updated successfully!", Toast.LENGTH_SHORT).show();
+                                    })
+                                    .addOnFailureListener(e -> {
+                                        Toast.makeText(ebook_register.this, "Error updating book", Toast.LENGTH_SHORT).show();
+                                    });
+                        }
+                    } else {
+                        Toast.makeText(ebook_register.this, "Book not found for update", Toast.LENGTH_SHORT).show();
+                    }
                 })
                 .addOnFailureListener(e -> {
-                    Toast.makeText(ebook_register.this, "Error updating book", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ebook_register.this, "Error finding book to update", Toast.LENGTH_SHORT).show();
                 });
     }
+
 
     // Method to delete a book entry
     private void deleteBook() {
-        String bookId = "your_book_id_here";  // Get the book ID from the book selection or view all feature
-        db.collection("ebooks").document(bookId)
-                .delete()
-                .addOnSuccessListener(aVoid -> {
-                    Toast.makeText(ebook_register.this, "Book deleted successfully!", Toast.LENGTH_SHORT).show();
+        String titleToDelete = bookTitle.getText().toString().trim();
+
+        if (titleToDelete.isEmpty()) {
+            Toast.makeText(this, "Enter the book title to delete", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        db.collection("ebooks")
+                .whereEqualTo("title", titleToDelete)
+                .get()
+                .addOnSuccessListener(queryDocumentSnapshots -> {
+                    if (!queryDocumentSnapshots.isEmpty()) {
+                        for (QueryDocumentSnapshot document : queryDocumentSnapshots) {
+                            db.collection("ebooks").document(document.getId())
+                                    .delete()
+                                    .addOnSuccessListener(aVoid -> {
+                                        Toast.makeText(ebook_register.this, "Book deleted successfully!", Toast.LENGTH_SHORT).show();
+                                        clearFields();
+                                    })
+                                    .addOnFailureListener(e -> {
+                                        Toast.makeText(ebook_register.this, "Error deleting book", Toast.LENGTH_SHORT).show();
+                                    });
+                        }
+                    } else {
+                        Toast.makeText(ebook_register.this, "Book not found", Toast.LENGTH_SHORT).show();
+                    }
                 })
                 .addOnFailureListener(e -> {
-                    Toast.makeText(ebook_register.this, "Error deleting book", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ebook_register.this, "Error finding book", Toast.LENGTH_SHORT).show();
                 });
     }
+
+    private void clearFields() {
+        bookTitle.setText("");
+        authorName.setText("");
+        genre.setText("");
+        bookDescription.setText("");
+        ratings.setText("");
+    }
+
 
     // Method to view all books
     // Method to view all books in a dialog
