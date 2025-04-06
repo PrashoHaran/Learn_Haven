@@ -227,6 +227,7 @@ public class ebook_register extends AppCompatActivity {
             return;
         }
 
+
         db.collection("ebooks")
                 .whereEqualTo("title", titleToDelete)
                 .get()
